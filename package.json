@@ -1,0 +1,32 @@
+{
+  "name": "star-wars-graphql-api",
+  "version": "1.0.0",
+  "description": "A demo project showing how to create a GraphQL API based on the Star Wars API",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon src/index.ts",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Daniel van der Meijden",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@envelop/graphql-jit": "^6.0.1",
+    "@pothos/core": "^3.32.1",
+    "@pothos/plugin-errors": "^3.11.1",
+    "dataloader": "^2.2.2",
+    "dotenv": "^16.3.1",
+    "graphql": "^16.7.1",
+    "graphql-jit": "^0.8.4",
+    "graphql-middleware": "^6.1.35",
+    "graphql-yoga": "^4.0.3",
+    "zod": "^3.21.4"
+  }
+}
