@@ -20,6 +20,8 @@ This demo project is a GraphQL wrapper for the Star Wars REST API. It demonstrat
 
 [Star Wars API Documentation](https://swapi.dev/)
 
+Be sure to also take a look at the [other branch](https://github.com/danielvdm2000/star-wars-graphql-api/tree/feature-co-hosting-of-swapi) where I co-host the SWAPI and GraphQL API, using Docker to reduce network latency.
+
 ## Getting Started
 
 ### Prerequisites
