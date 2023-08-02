@@ -77,6 +77,7 @@ export class SwapiService implements IStarWarsService {
         // Check if the response is ok
         if (!response.ok) {
             if (response.status === 404) throw new NotFoundError(url);
+            console.log(response);
             throw new InternalServerError({
                 description: "Error while fetching data from the Star Wars API.",
                 url,

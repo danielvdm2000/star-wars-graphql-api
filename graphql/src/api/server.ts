@@ -8,6 +8,7 @@ import { BaseError } from '../errors';
 export interface ServerSettings {
     port: number;
     mode: 'development' | 'production';
+    enableGraphqlExplorer: boolean;
 }
 
 export function startServer(settings: ServerSettings): Server {
@@ -18,7 +19,7 @@ export function startServer(settings: ServerSettings): Server {
     const yoga = createYoga({
         schema,
         landingPage: false,
-        graphiql: settings.mode === 'development',
+        graphiql: settings.enableGraphqlExplorer,
         plugins: [useGraphQlJit()],
     })
 

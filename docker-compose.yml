@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  graphql:
+    build: ./graphql
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+    environment:
+      - PORT=3000
+      - MODE=production
+      - SWAPI_API_BASE_URL=http://swapi:8000/api
+      - ENABLE_GRAPHQL_EXPLORER=true
+    depends_on:
+      - swapi
+
+  swapi:
+    build: ./swapi
+    expose:
+      - "8000"
+    networks:
+      - backend
+
+networks:
+  backend:
